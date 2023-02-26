@@ -1,4 +1,5 @@
 Problem:
+
 Given a list of strings, group them in such a way that all strings in a group are anagrams of each other.
 
 Ex: I/P - ["eat", "tea", "bat", "tab", "cat"\]
@@ -72,7 +73,7 @@ public:
         string t;
         for(int i = 0; i < 26; ++i)
         {
-            t += string(cnt[i], 'a' + i);
+            t += string(cnt[i], 'a' + i);   // this is one type of std::string class constructor - string (size_t n, char c);
         }
         return t;
     }

@@ -1,4 +1,5 @@
 Problem:
+
 Two strings `s` and `t` are given, return `true` if `s` is an anagram of `t`, and return `false` otherwise.
 
 Sorting:

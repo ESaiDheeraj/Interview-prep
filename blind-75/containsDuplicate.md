@@ -1,4 +1,5 @@
 Problem:
+
 Return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
 
 Brute Force solution:
