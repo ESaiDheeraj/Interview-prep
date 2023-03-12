@@ -86,17 +86,21 @@ public:
         DSU dsu(n);
         for(int i = 0; i < n; ++i)
         {
-            if(mp.find(nums[i]) != mp.end()) 
-                continue;
+            mp[nums[i]] = i;
+        }
+        for(int i = 0; i < n; ++i)
+        {
+            // if(mp.find(nums[i]) != mp.end()) 
+            //     continue;
             if(mp.find(nums[i] + 1) != mp.end())
             {
-                dsu.union_sets(i, mp[nums[i] + 1]);
+                dsu.union_sets(mp[nums[i]], mp[nums[i] + 1]);   // here I am writing mp[nums[i]] instead i directly to account for repeated elements in the input array.
             }
             if(mp.find(nums[i] - 1) != mp.end())
             {
-                dsu.union_sets(i, mp[nums[i] - 1]);
+                dsu.union_sets(mp[nums[i]], mp[nums[i] - 1]);
             }
-            mp[nums[i]] = i;
+            // mp[nums[i]] = i;
         }
         int max_size = 0;
         for(int i = 0; i < n; ++i)
